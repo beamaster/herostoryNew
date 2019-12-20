@@ -21,6 +21,7 @@ public class UserMoveToCmdHandler implements CmdHandler<MessageProtocol.UserMove
         resultBuilder.setMoveUserId(userId);
         resultBuilder.setMoveToPosX(cmd.getMoveToPosX());
         resultBuilder.setMoveToPosY(cmd.getMoveToPosY());
+
         MessageProtocol.UserMoveToResult newResult = resultBuilder.build();
         Broadcaster.broadcast(newResult);
     }
